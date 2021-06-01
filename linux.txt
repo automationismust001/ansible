@@ -1,0 +1,2 @@
+[linux]
+name of server ansible_host=ip address
