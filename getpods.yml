@@ -1,0 +1,13 @@
+---
+- name: List all the pods
+  hosts: master
+  gather_facts: no
+  remote_user: root
+  connection: ssh
+  tasks:
+   - name: List all the pods
+     command: kubectl get pods
+     register: getpods
+   - name: Print the pods details   
+     debug:
+      var: getpods.stdout_lines

@@ -1,0 +1,6 @@
+[linux]
+# root@192.168.1.200
+192.168.1.193 ansible_ssh_pass='Peg@seOS@123' ansible_ssh_user=root
+192.168.1.195 ansible_ssh_pass='Peg@seOS@123' ansible_ssh_user=root
+192.168.1.196 ansible_ssh_pass='Peg@seOS@123' ansible_ssh_user=root
+192.168.1.203 ansible_ssh_pass='Peg@seOS@123' ansible_ssh_user=root

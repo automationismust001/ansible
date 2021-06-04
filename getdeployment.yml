@@ -1,0 +1,13 @@
+---
+- name: List all the deployment
+  hosts: master
+  gather_facts: no
+  remote_user: root
+  connection: ssh
+  tasks:
+   - name: List all the deployment
+     command: kubectl get deployment
+     register: getdeployment
+   - name: Print the deployment details   
+     debug:
+      var: getdeployment.stdout_lines

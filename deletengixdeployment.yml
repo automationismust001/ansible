@@ -1,0 +1,13 @@
+---
+- name: Delete the ngix deployment
+  hosts: master
+  gather_facts: no
+  remote_user: root
+  connection: ssh
+  tasks:
+   - name: Delete all the ngix deployment
+     command: kubectl delete deployment nginx-depl
+     ##    register: createngixdeployment
+     ## - name: Print the Ngx Deployment details   
+     ##     debug:
+     ##     var: creatingngixdeployment.stdout_lines

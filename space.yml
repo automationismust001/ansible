@@ -1,0 +1,13 @@
+---
+- name: List all the services
+  hosts: linux
+  gather_facts: no
+  remote_user: root
+  connection: ssh
+  tasks:
+   - name: Drive Space for all the servers
+     command: df -h
+     register: space1
+   - name: Print the Drive space details   
+     debug:
+      var: space1.stdout_lines

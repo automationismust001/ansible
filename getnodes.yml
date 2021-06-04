@@ -1,0 +1,13 @@
+---
+- name: List all the nodes
+  hosts: master
+  gather_facts: no
+  remote_user: root
+  connection: ssh
+  tasks:
+   - name: List all the nodes
+     command: kubectl get nodes
+     register: getnodes
+   - name: Print the nodes details   
+     debug:
+      var: getnodes.stdout_lines

@@ -1,0 +1,13 @@
+---
+- name: Create the ngix deployment
+  hosts: master
+  gather_facts: no
+  remote_user: root
+  connection: ssh
+  tasks:
+   - name: Create all the ngix deployment
+     command: kubectl create deployment nginx-depl --image=nginx
+     ##    register: createngixdeployment
+     ## - name: Print the Ngx Deployment details   
+     ##     debug:
+     ##     var: creatingngixdeployment.stdout_lines
